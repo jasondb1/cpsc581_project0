@@ -11,6 +11,7 @@
 
         <Label x:Name="powerLabel" Content="Label" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top"/>
         <Button x:Name="myButton" Content="Button" Width="75" Canvas.Left="315" Canvas.Top="201"/>
+        <local:RobertPumping Height="95.045" Canvas.Left="486.456" Canvas.Top="201" Width="167.91"/>
 
     </Canvas>
 </Window>
