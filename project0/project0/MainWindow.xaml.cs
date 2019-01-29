@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace project0
 {
@@ -22,17 +24,29 @@ namespace project0
     {
 
         public UserButton userButton = new UserButton();
+        public const bool DEBUG = true;
 
         public MainWindow()
         {
+
+            if (DEBUG) { Console.WriteLine("[Init]"); }
             InitializeComponent();
 
             //event Handlers
             this.KeyUp += OnMainWindowKeyUp;
-            this.MainButton.Click += OnMainWindowButtonClick;
+            this.myButton.Click += OnMyButtonClick;
+
+            this.userButton.PropertyChanged += OnCounterPropertyChanged;
 
 
         }
+
+        private void MainButton_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        #region methods
 
         private void OnMainWindowKeyUp(object sender, KeyEventArgs e)
         {
@@ -43,10 +57,18 @@ namespace project0
             }
         }
 
-        private void OnMainWindowButtonClick(object sender, KeyEventArgs e)
+        private void OnCounterPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
+            if (DEBUG) { Console.WriteLine("[On Counter property Change]:" + e ); }
+            this.powerLabel.Content = this.userButton.Power;
+        }
+
+        private void OnMyButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (DEBUG) { Console.WriteLine("[Button was clicked]"); }
             this.userButton.processClick();
         }
+        #endregion
 
     }
 }

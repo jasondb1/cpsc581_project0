@@ -6,13 +6,11 @@
         xmlns:local="clr-namespace:project0"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Label x:Name="Title" Content="The Robert Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="MainButton" HorizontalAlignment="Left" Margin="175.278,10,0,0" VerticalAlignment="Top" Width="400" Height="400">
-            <Ellipse Fill="#FFF4F4F5" Height="390" Stroke="Black" Width="390"/>
-            <Ellipse Fill="#FFF4F4F5" Height="350" Stroke="Black" Width="350"/>
-            
-        </Button>
+    <Canvas Name="Container">
+        <Label x:Name="title" Content="The Robert Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
 
-    </Grid>
+        <Label x:Name="powerLabel" Content="Label" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="myButton" Content="Button" Width="75" Canvas.Left="315" Canvas.Top="201"/>
+
+    </Canvas>
 </Window>
