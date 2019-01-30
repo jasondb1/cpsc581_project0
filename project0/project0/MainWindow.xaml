@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:project0"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Canvas Name="Container">
+        Title="MainWindow" Height="800" Width="600">
+    <Canvas Name="Container" Margin="0,0,-8,1">
         <Label x:Name="title" Content="The Robert Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
 
         <Label x:Name="powerLabel" Content="Label" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="myButton" Content="Button" Width="75" Canvas.Left="315" Canvas.Top="201"/>
-        <local:RobertPumping Height="95.045" Canvas.Left="486.456" Canvas.Top="201" Width="167.91"/>
+        <Button x:Name="myButton" Content="Button" Width="75" Canvas.Left="10" Canvas.Top="141"/>
+        <local:RobertPumping Height="95" Canvas.Left="324" Canvas.Top="66" Width="168" RenderTransformOrigin="0.356,0.431" Loaded="RobertPumping_Loaded"/>
+        <local:PowerMeter Height="580" Width="580" Canvas.Top="178" Loaded="PowerMeter_Loaded" Canvas.Left="10" />
 
     </Canvas>
 </Window>

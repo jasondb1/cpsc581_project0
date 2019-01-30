@@ -70,5 +70,14 @@ namespace project0
         }
         #endregion
 
+        private void RobertPumping_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PowerMeter_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

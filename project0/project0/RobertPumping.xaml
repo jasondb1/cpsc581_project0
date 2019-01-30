@@ -101,11 +101,12 @@
             <ColumnDefinition Width="25*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="66*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="9*"/>
             <RowDefinition Height="29*"/>
         </Grid.RowDefinitions>
-        <Ellipse x:Name="robertHead" Fill="Black" Stroke="Black" Margin="32.025,41.337,63.275,-9.545" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-        <Rectangle x:Name="leftArm" Fill="Black" Margin="-55.964,3.107,32.295,15.608" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+        <Ellipse x:Name="robertHead" Fill="Black" Stroke="Black" Margin="32,41,63,-10" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+        <Rectangle x:Name="leftArm" Fill="Black" Margin="-56,3,32,16" RenderTransformOrigin="0.5,0.5" Grid.Row="2">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -115,7 +116,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="leftWrist" Fill="Black" Margin="-96.996,31.839,73.327,23.831" RenderTransformOrigin="0.5,0.5">
+        <Rectangle x:Name="leftWrist" Fill="Black" Margin="-97,32,73,14.863" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1.106" ScaleX="0.904"/>
@@ -125,7 +126,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="rightArm" Fill="Black" Margin="33.906,1.776,-25.665,16.939" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Rectangle x:Name="rightArm" Fill="Black" Margin="34,2,-26,17" Grid.Row="2" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -135,7 +136,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="rightWrist" Fill="Black" Margin="74.385,30.175,-66.145,25.495" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Rectangle x:Name="rightWrist" Fill="Black" Margin="74,30,-66,15.863" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1.106" ScaleX="0.904"/>
@@ -145,7 +146,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="Bar" Fill="#FF4F4F4F" HorizontalAlignment="Left" Height="18.635" Margin="-108,-23.218,-65.59,0" VerticalAlignment="Top" Width="341.5" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+        <Rectangle x:Name="Bar" Fill="#FF4F4F4F" HorizontalAlignment="Left" Height="18" Margin="-108,-23,-66,0" VerticalAlignment="Top" Width="342" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -155,7 +156,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Ellipse x:Name="rightWeight" Fill="Black" HorizontalAlignment="Left" Height="75.535" Margin="147.836,-52.5,-60.438,0" VerticalAlignment="Top" Width="12.512" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+        <Ellipse x:Name="rightWeight" Fill="Black" HorizontalAlignment="Left" Height="75" Margin="148,-52,-60,0" VerticalAlignment="Top" Width="12" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -165,7 +166,7 @@
                 </TransformGroup>
             </Ellipse.RenderTransform>
         </Ellipse>
-        <Ellipse x:Name="leftWeight" Fill="Black" HorizontalAlignment="Left" Height="75.535" Margin="-102.848,-52.5,0,0" VerticalAlignment="Top" Width="12.512" RenderTransformOrigin="0.5,0.5">
+        <Ellipse x:Name="leftWeight" Fill="Black" HorizontalAlignment="Left" Height="75" Margin="-103,-52,0,0" VerticalAlignment="Top" Width="13" RenderTransformOrigin="0.5,0.5">
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
