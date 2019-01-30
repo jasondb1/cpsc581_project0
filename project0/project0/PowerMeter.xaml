@@ -38,8 +38,7 @@
                 </Ellipse.Fill>
             </Ellipse>
         </Canvas>
-
-        <local:RobertPumping x:Name="Robert" Canvas.Left="226.665" Canvas.Top="270.665" Panel.ZIndex="15" />
+        <local:RobertPumping x:Name="Robert" Canvas.Left="83.165" Canvas.Top="207.165" Panel.ZIndex="15" />
 
     </Canvas>
 </UserControl>

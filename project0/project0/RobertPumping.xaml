@@ -4,8 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:project0"
-             mc:Ignorable="d" 
-             d:DesignHeight="95.045" d:DesignWidth="167.91">
+             mc:Ignorable="d" Width="388.91" Height="181.545">
     <UserControl.Resources>
         <Storyboard x:Key="Pump">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="leftArm">
@@ -95,18 +94,9 @@
             <BeginStoryboard Storyboard="{StaticResource Pump}"/>
         </EventTrigger>
     </UserControl.Triggers>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="17*"/>
-            <ColumnDefinition Width="25*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="57*"/>
-            <RowDefinition Height="9*"/>
-            <RowDefinition Height="29*"/>
-        </Grid.RowDefinitions>
-        <Ellipse x:Name="robertHead" Fill="Black" Stroke="Black" Margin="32,41,63,-10" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
-        <Rectangle x:Name="leftArm" Fill="Black" Margin="-56,3,32,16" RenderTransformOrigin="0.5,0.5" Grid.Row="2">
+    <Canvas HorizontalAlignment="Left" Height="95.045" VerticalAlignment="Top" Width="100">
+        <Ellipse x:Name="robertHead" Fill="Black" Stroke="Black" Height="64" Canvas.Left="168" Canvas.Top="114.5" Width="72"/>
+        <Rectangle x:Name="leftArm" Fill="Black" RenderTransformOrigin="0.5,0.5" Height="10" Canvas.Left="80" Canvas.Top="142.5" Width="91.595">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -116,7 +106,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="leftWrist" Fill="Black" Margin="-97,32,73,14.863" RenderTransformOrigin="0.5,0.5">
+        <Rectangle x:Name="leftWrist" Fill="Black" RenderTransformOrigin="0.5,0.5" Height="10.137" Canvas.Left="39" Canvas.Top="105.5" Width="91.595">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1.106" ScaleX="0.904"/>
@@ -126,7 +116,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="rightArm" Fill="Black" Margin="34,2,-26,17" Grid.Row="2" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Rectangle x:Name="rightArm" Fill="Black" RenderTransformOrigin="0.5,0.5" Height="10" Canvas.Left="237.595" Canvas.Top="141.5" Width="91.405">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -136,7 +126,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="rightWrist" Fill="Black" Margin="74,30,-66,15.863" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+        <Rectangle x:Name="rightWrist" Fill="Black" RenderTransformOrigin="0.5,0.5" Height="11.137" Canvas.Left="277.595" Canvas.Top="103.5" Width="91.405">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1.106" ScaleX="0.904"/>
@@ -146,7 +136,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="Bar" Fill="#FF4F4F4F" HorizontalAlignment="Left" Height="18" Margin="-108,-23,-66,0" VerticalAlignment="Top" Width="342" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+        <Rectangle x:Name="Bar" Fill="#FF4F4F4F" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="342" RenderTransformOrigin="0.5,0.5" Canvas.Left="28" Canvas.Top="50.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -156,7 +146,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Ellipse x:Name="rightWeight" Fill="Black" HorizontalAlignment="Left" Height="75" Margin="148,-52,-60,0" VerticalAlignment="Top" Width="12" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+        <Ellipse x:Name="rightWeight" Fill="Black" HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="12" RenderTransformOrigin="0.5,0.5" Canvas.Left="351.595" Canvas.Top="21.5">
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -166,7 +156,7 @@
                 </TransformGroup>
             </Ellipse.RenderTransform>
         </Ellipse>
-        <Ellipse x:Name="leftWeight" Fill="Black" HorizontalAlignment="Left" Height="75" Margin="-103,-52,0,0" VerticalAlignment="Top" Width="13" RenderTransformOrigin="0.5,0.5">
+        <Ellipse x:Name="leftWeight" Fill="Black" HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="13" RenderTransformOrigin="0.5,0.5" Canvas.Left="33" Canvas.Top="21.5">
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -176,6 +166,5 @@
                 </TransformGroup>
             </Ellipse.RenderTransform>
         </Ellipse>
-
-    </Grid>
+    </Canvas>
 </UserControl>

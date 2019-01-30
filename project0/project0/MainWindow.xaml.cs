@@ -35,7 +35,6 @@ namespace project0
 
             //event Handlers
             this.KeyUp += OnMainWindowKeyUp;
-            this.myButton.Click += OnMyButtonClick;
             
 
             this.userButton.PropertyChanged += OnCounterPropertyChanged;
@@ -65,16 +64,19 @@ namespace project0
             this.powerLabel.Content = this.userButton.Power;
         }
 
-        private void OnMyButtonClick(object sender, RoutedEventArgs e)
-        {
-            if (DEBUG) { Console.WriteLine("[Button was clicked]"); }
-            this.userButton.processClick();
+        //private void OnMyButtonClick(object sender, RoutedEventArgs e)
+        //{
+        //    if (DEBUG) { Console.WriteLine("[Button was clicked]"); }
+        //    this.userButton.processClick();
 
-            //Standalone Robert
-            Storyboard sb = (this.Robert.Resources["Pump"] as Storyboard);
-            sb.Begin();
 
-        }
+        //    RobertPumping robert = this.myButton.FindResource("Robert") as RobertPumping;
+
+        //    //Standalone Robert
+        //    Storyboard sb = (this.myButton.Resources["Pump"] as Storyboard);
+        //    sb.Begin();
+
+        //}
         #endregion
 
         private void RobertPumping_Loaded(object sender, RoutedEventArgs e)
