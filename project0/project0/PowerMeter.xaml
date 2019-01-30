@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:project0"
              mc:Ignorable="d" 
-             d:DesignHeight="580" d:DesignWidth="580">
+             d:DesignHeight="580" d:DesignWidth="580"
+             >
     <Canvas Name="PMeter">
         <Canvas Name="Meter" Height="560" Width="560" Canvas.Left="10" Canvas.Top="10">
             <Ellipse x:Name="OuterRing" Height="560" Stroke="Black" Width="560" Canvas.Left="0" Panel.ZIndex="-5">
@@ -38,7 +39,7 @@
             </Ellipse>
         </Canvas>
 
-        <local:RobertPumping Canvas.Left="226.665" Canvas.Top="270.665" Panel.ZIndex="15" />
+        <local:RobertPumping x:Name="Robert" Canvas.Left="226.665" Canvas.Top="270.665" Panel.ZIndex="15" />
 
     </Canvas>
 </UserControl>

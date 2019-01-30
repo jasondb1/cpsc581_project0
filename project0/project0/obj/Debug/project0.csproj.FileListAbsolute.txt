@@ -50,3 +50,4 @@ D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.csproj.GenerateReso
 D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.csproj.CoreCompileInputs.cache
 D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.exe
 D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.pdb
+D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.csprojAssemblyReference.cache
