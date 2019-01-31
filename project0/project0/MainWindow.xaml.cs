@@ -103,5 +103,10 @@ namespace project0
         {
 
         }
+
+        private void PowerMeter_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            // Implement click and hold
+        }
     }
 }
