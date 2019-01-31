@@ -86,8 +86,7 @@
         <Label x:Name="title" Content="The Robert Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
 
         <Label x:Name="powerLabel" Content="Power" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top"/>
-        <local:RobertPumping x:Name="Robert" Height="95" Canvas.Left="324" Canvas.Top="66" Width="168" RenderTransformOrigin="0.356,0.431" Loaded="RobertPumping_Loaded"/>
-        <local:PowerMeter x:Name="powerMeter" Height="100" Canvas.Top="185.15" Width="100" Canvas.Left="4.776"/>
-
+        <local:PowerMeter x:Name="powerMeter" Height="580" Canvas.Top="185.15" Width="580" Canvas.Left="10"/>
+        <local:cake x:Name="cake" Height="580" Canvas.Top="-67.141" Width="580" Canvas.Left="57.43" Visibility="Hidden"/>
     </Canvas>
 </Window>

@@ -53,3 +53,5 @@ D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.pdb
 D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.csprojAssemblyReference.cache
 C:\Users\colep\Documents\cpsc581_project0\project0\project0\obj\Debug\PowerMeter.g.cs
 C:\Users\colep\Documents\cpsc581_project0\project0\project0\obj\Debug\PowerMeter.baml
+D:\git\cpsc581_project0\project0\project0\obj\Debug\cake.g.cs
+D:\git\cpsc581_project0\project0\project0\obj\Debug\cake.baml

@@ -89,5 +89,9 @@ namespace project0
 
         }
 
+        private void PowerMeter_Loaded_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

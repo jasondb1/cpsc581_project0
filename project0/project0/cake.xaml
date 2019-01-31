@@ -1,0 +1,182 @@
+﻿<UserControl x:Class="project0.cake"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:project0"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="480">
+    <UserControl.Resources>
+        <Storyboard x:Key="CakeRiseSB">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="CakeTop">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.03"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CakeTop">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-297.282"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height" Storyboard.TargetName="CakeSides">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="295"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height" Storyboard.TargetName="CakeRight">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="295"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height" Storyboard.TargetName="CakeLeft">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="295"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height" Storyboard.TargetName="CakeCut5">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="295"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height" Storyboard.TargetName="CakeCut6">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="295"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height" Storyboard.TargetName="CakeCut7">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="295"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="CakeTop">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.996"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="CakeTop">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="1.01"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CakeCut1">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-296"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CakeCut2">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-296"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CakeCut3">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-296"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CakeCut4">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-296"/>
+            </DoubleAnimationUsingKeyFrames>
+
+
+
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Canvas x:Name="Cake">
+        <Ellipse x:Name="CakeBase" Height="100" Stroke="Black" StrokeThickness="4" Canvas.Top="500" Width="480" Fill="#FFFDFFD2"/>
+        <Ellipse x:Name="CakeTop" Height="100" Stroke="Black" StrokeThickness="4" Canvas.Top="500" Width="480" Fill="#FFFDFFD2" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="10">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Rectangle x:Name="CakeSides" Fill="#FFFDFFD2" Height="1" Stroke="Black" StrokeThickness="0" Canvas.Top="547" Width="480" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:Name="CakeRight" Fill="#FFFDFFD2" Height="2" Canvas.Left="475.5" Stroke="Black" StrokeThickness="4" Canvas.Top="547" Width="4.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:Name="CakeLeft" Fill="#FFFDFFD2" Height="2" Canvas.Left="0" Stroke="Black" StrokeThickness="4" Canvas.Top="547" Width="4.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:Name="CakeCut1" Fill="#FFFDFFD2" Height="1" Stroke="Black" StrokeThickness="4" Canvas.Top="547" Width="480" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="10">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:Name="CakeCut2" Fill="#FFFDFFD2" Height="100" Canvas.Left="240" Stroke="Black" StrokeThickness="4" Canvas.Top="500" Width="1" Panel.ZIndex="10" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:Name="CakeCut3" Fill="#FFFDFFD2" Height="100" Canvas.Left="234" Stroke="Black" StrokeThickness="4" Canvas.Top="500" Width="1" Panel.ZIndex="10" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.2" ScaleY="2.93"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="75"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:Name="CakeCut4" Fill="#FFFDFFD2" Height="100" Canvas.Left="240" Stroke="Black" StrokeThickness="4" Canvas.Top="498" Width="1" Panel.ZIndex="10" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.2" ScaleY="2.93"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-75"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+        <Rectangle x:Name="CakeCut5" Fill="#FFFDFFD2" Height="2" Canvas.Left="91.5" Stroke="Black" StrokeThickness="2" Canvas.Top="589" Width="4.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+        <Rectangle x:Name="CakeCut6" Fill="#FFFDFFD2" Height="2" Canvas.Left="238" Stroke="Black" StrokeThickness="2" Canvas.Top="599" Width="4.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+        <Rectangle x:Name="CakeCut7" Fill="#FFFDFFD2" Height="2" Canvas.Left="378.5" Stroke="Black" StrokeThickness="4" Canvas.Top="590" Width="2.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+    </Canvas>
+</UserControl>

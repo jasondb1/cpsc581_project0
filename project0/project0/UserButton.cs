@@ -14,6 +14,7 @@ namespace project0
 
         #region instance variables
         private int power = 0;
+        private const int maxPower = 12;
 
         #endregion
 

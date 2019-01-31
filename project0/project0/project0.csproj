@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="cake.xaml.cs">
+      <DependentUpon>cake.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PowerMeter.xaml.cs">
       <DependentUpon>PowerMeter.xaml</DependentUpon>
     </Compile>
@@ -62,6 +65,10 @@
       <DependentUpon>RobertPumping.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserButton.cs" />
+    <Page Include="cake.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
