@@ -76,6 +76,8 @@ namespace project0
         {
             if (DEBUG) { Console.WriteLine("[Handle User Click]"); }
             this.userButton.processClick();
+            this.powerMeter.progressBar.EndAngle += (360/12);
+
 
             if (userButton.isMax())
             {
@@ -86,6 +88,8 @@ namespace project0
                 //TODO: wait and reset or reset on button
             }
 
+                
+            
         }
         #endregion
 
