@@ -19,7 +19,6 @@ namespace project0
         #endregion
 
         #region attributes
-
         public int Power
         {
             get
@@ -35,8 +34,19 @@ namespace project0
 
         #endregion
 
+        /// <summary>
+        /// Checks if power is at max level
+        /// </summary>
+        /// <returns>true or false</returns>
+        public bool isMax()
+        {
+            return power >= maxPower;
+        }
 
         #region Methods
+        /// <summary>
+        /// Processes the events when the button is clicked
+        /// </summary>
         public void processClick()
         {
             if (DEBUG) { Console.Write("[ProcessClick]\n"); }
@@ -44,6 +54,9 @@ namespace project0
             this.incrementPower();
         }
 
+        /// <summary>
+        /// increment power by 1
+        /// </summary>
         public void incrementPower()
         {
             this.power++;
@@ -55,14 +68,12 @@ namespace project0
 
         #region Events
 
-        /*
-         * the PropertyChanged event is part of the implementation of
-         * INotifyPropertyChanged (remember, interfaces start with I, this is an interface)
-         * This will let us trigger an event whenever a property, in this case Count, is updated
-         */
-
+        /// <summary>
+        /// notifies listeners/observers of a property change
+        /// </summary>
+        /// <param name="e"></param>
+        /// 
         public event PropertyChangedEventHandler PropertyChanged;
-
         public void RaisePropertyChanged(PropertyChangedEventArgs e)
         {
             // Most events have a similar structure, they have a "sender", and some
@@ -71,7 +82,6 @@ namespace project0
             if (DEBUG) { Console.Write("[Property Changed]\n"); }
         }
         #endregion
-
 
     }
 

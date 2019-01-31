@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -24,5 +25,15 @@ namespace project0
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// animate the cake
+        /// </summary>
+        public void animate()
+        {
+            Storyboard sb = (this.Resources["CakeRiseSB"] as Storyboard);
+            sb.Begin();
+        }
     }
+
 }

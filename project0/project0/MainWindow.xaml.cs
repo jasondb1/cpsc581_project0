@@ -36,19 +36,17 @@ namespace project0
             //event Handlers
             this.KeyUp += OnMainWindowKeyUp;
             
-
             this.userButton.PropertyChanged += OnCounterPropertyChanged;
 
-
-        }
-
-        private void MainButton_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         #region methods
 
+        /// <summary>
+        /// Closes the window with the escape key
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnMainWindowKeyUp(object sender, KeyEventArgs e)
         {
             // if the user 'releases' escape, close the program
@@ -58,25 +56,36 @@ namespace project0
             }
         }
 
+        /// <summary>
+        /// Changes the power label when signalled (for debugging - delete when required)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnCounterPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (DEBUG) { Console.WriteLine("[On Counter property Change]:" + e ); }
             this.powerLabel.Content = this.userButton.Power;
         }
 
-        //private void OnMyButtonClick(object sender, RoutedEventArgs e)
-        //{
-        //    if (DEBUG) { Console.WriteLine("[Button was clicked]"); }
-        //    this.userButton.processClick();
+        /// <summary>
+        /// Calls the button logic when a button is pressed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void HandleUserClick(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (DEBUG) { Console.WriteLine("[Handle User Click]"); }
+            this.userButton.processClick();
 
+            if (userButton.isMax())
+            {
+                this.cake.Visibility = Visibility.Visible;
+                this.powerMeter.hideRobert();
+                this.cake.animate();
+                //TODO: wait and reset or reset on button
+            }
 
-        //    RobertPumping robert = this.myButton.FindResource("Robert") as RobertPumping;
-
-        //    //Standalone Robert
-        //    Storyboard sb = (this.myButton.Resources["Pump"] as Storyboard);
-        //    sb.Begin();
-
-        //}
+        }
         #endregion
 
         private void RobertPumping_Loaded(object sender, RoutedEventArgs e)
