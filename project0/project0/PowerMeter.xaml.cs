@@ -25,7 +25,7 @@ namespace project0
         {
             InitializeComponent();
             this.MouseDown += PowerMeter_MouseDown;
-            
+
         }
 
         /// <summary>
@@ -70,6 +70,15 @@ namespace project0
         public void unhideRobert()
         {
             this.Robert.Visibility = Visibility.Visible;
+        }
+
+        /// <summary>
+        /// Rotate the meter for cake animation
+        /// </summary>
+        public void rotateMeter()
+        {
+            Storyboard sb = (this.Resources["PerspectiveRotateSB"] as Storyboard);
+            sb.Begin();
         }
 
     }

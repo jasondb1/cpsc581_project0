@@ -7,8 +7,37 @@
              mc:Ignorable="d" 
              d:DesignHeight="580" d:DesignWidth="580"
              >
-    <Canvas Name="PMeter">
-        <Canvas Name="Meter" Height="560" Width="560" Canvas.Left="10" Canvas.Top="10">
+    <UserControl.Resources>
+        <Storyboard x:Key="PerspectiveRotateSB">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="PMeter">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.3"/>
+            </DoubleAnimationUsingKeyFrames>
+
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Canvas Name="PMeter" RenderTransformOrigin="0.5,0.5">
+        <Canvas.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Canvas.RenderTransform>
+        <Canvas Name="Meter" Height="560" Width="560" Canvas.Left="10" Canvas.Top="10" RenderTransformOrigin="0.5,0.5">
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
             <Ellipse x:Name="OuterRing" Height="560" Stroke="Black" Width="560" Canvas.Left="0" Panel.ZIndex="-5" Margin="-1,0,0,0" StrokeThickness="8">
                 <Ellipse.Effect>
                     <BlurEffect Radius="4" RenderingBias="Quality"/>

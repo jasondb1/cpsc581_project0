@@ -26,6 +26,9 @@ namespace project0
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Animate Robert
+        /// </summary>
         public void animate()
         {
             Storyboard sb = (this.Resources["Pump"] as Storyboard);

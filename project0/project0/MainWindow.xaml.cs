@@ -35,7 +35,7 @@ namespace project0
 
             //event Handlers
             this.KeyUp += OnMainWindowKeyUp;
-            
+
             this.userButton.PropertyChanged += OnCounterPropertyChanged;
 
         }
@@ -63,7 +63,7 @@ namespace project0
         /// <param name="e"></param>
         private void OnCounterPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (DEBUG) { Console.WriteLine("[On Counter property Change]:" + e ); }
+            if (DEBUG) { Console.WriteLine("[On Counter property Change]:" + e); }
             this.powerLabel.Content = this.userButton.Power;
         }
 
@@ -81,6 +81,7 @@ namespace project0
             {
                 this.cake.Visibility = Visibility.Visible;
                 this.powerMeter.hideRobert();
+                this.powerMeter.rotateMeter();
                 this.cake.animate();
                 //TODO: wait and reset or reset on button
             }
