@@ -145,7 +145,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
 
-        <Rectangle x:Name="CakeCut5" Fill="#FFFDFFD2" Height="2" Canvas.Left="91.5" Stroke="Black" StrokeThickness="2" Canvas.Top="589" Width="4.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
+        <Rectangle x:Name="CakeCut5" Fill="#FFFDFFD2" Height="2" Canvas.Left="91.5" Stroke="Black" StrokeThickness="2" Canvas.Top="589" Width="2.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -156,7 +156,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
 
-        <Rectangle x:Name="CakeCut6" Fill="#FFFDFFD2" Height="2" Canvas.Left="238" Stroke="Black" StrokeThickness="2" Canvas.Top="599" Width="4.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
+        <Rectangle x:Name="CakeCut6" Fill="#FFFDFFD2" Height="2" Canvas.Left="238" Stroke="Black" StrokeThickness="2" Canvas.Top="599" Width="2.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -167,7 +167,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
 
-        <Rectangle x:Name="CakeCut7" Fill="#FFFDFFD2" Height="2" Canvas.Left="378.5" Stroke="Black" StrokeThickness="4" Canvas.Top="590" Width="2.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
+        <Rectangle x:Name="CakeCut7" Fill="#FFFDFFD2" Height="2" Canvas.Left="378.5" Stroke="Black" StrokeThickness="2" Canvas.Top="590" Width="2.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

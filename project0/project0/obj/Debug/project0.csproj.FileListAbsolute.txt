@@ -66,14 +66,6 @@ C:\Users\Cole\Documents\cpsc581_project0\project0\project0\bin\Debug\ru\Microsof
 C:\Users\Cole\Documents\cpsc581_project0\project0\project0\bin\Debug\zh-Hans\Microsoft.Expression.Drawing.resources.dll
 C:\Users\Cole\Documents\cpsc581_project0\project0\project0\bin\Debug\zh-Hant\Microsoft.Expression.Drawing.resources.dll
 C:\Users\Cole\Documents\cpsc581_project0\project0\project0\obj\Debug\project0.csproj.CopyComplete
-D:\git\cpsc581_project0\project0\project0\obj\Debug\cake.g.cs
-D:\git\cpsc581_project0\project0\project0\obj\Debug\MainWindow.g.cs
-D:\git\cpsc581_project0\project0\project0\obj\Debug\PowerMeter.g.cs
-D:\git\cpsc581_project0\project0\project0\obj\Debug\RobertPumping.g.cs
-D:\git\cpsc581_project0\project0\project0\obj\Debug\App.g.cs
-D:\git\cpsc581_project0\project0\project0\obj\Debug\GeneratedInternalTypeHelper.g.cs
-D:\git\cpsc581_project0\project0\project0\obj\Debug\project0_MarkupCompile.cache
-D:\git\cpsc581_project0\project0\project0\obj\Debug\project0_MarkupCompile.lref
 D:\git\cpsc581_project0\project0\project0\bin\Debug\project0.exe.config
 D:\git\cpsc581_project0\project0\project0\bin\Debug\project0.exe
 D:\git\cpsc581_project0\project0\project0\bin\Debug\project0.pdb
@@ -87,6 +79,15 @@ D:\git\cpsc581_project0\project0\project0\bin\Debug\ko\Microsoft.Expression.Draw
 D:\git\cpsc581_project0\project0\project0\bin\Debug\ru\Microsoft.Expression.Drawing.resources.dll
 D:\git\cpsc581_project0\project0\project0\bin\Debug\zh-Hans\Microsoft.Expression.Drawing.resources.dll
 D:\git\cpsc581_project0\project0\project0\bin\Debug\zh-Hant\Microsoft.Expression.Drawing.resources.dll
+D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.csprojAssemblyReference.cache
+D:\git\cpsc581_project0\project0\project0\obj\Debug\cake.g.cs
+D:\git\cpsc581_project0\project0\project0\obj\Debug\MainWindow.g.cs
+D:\git\cpsc581_project0\project0\project0\obj\Debug\PowerMeter.g.cs
+D:\git\cpsc581_project0\project0\project0\obj\Debug\RobertPumping.g.cs
+D:\git\cpsc581_project0\project0\project0\obj\Debug\App.g.cs
+D:\git\cpsc581_project0\project0\project0\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\git\cpsc581_project0\project0\project0\obj\Debug\project0_MarkupCompile.cache
+D:\git\cpsc581_project0\project0\project0\obj\Debug\project0_MarkupCompile.lref
 D:\git\cpsc581_project0\project0\project0\obj\Debug\cake.baml
 D:\git\cpsc581_project0\project0\project0\obj\Debug\MainWindow.baml
 D:\git\cpsc581_project0\project0\project0\obj\Debug\PowerMeter.baml
@@ -98,4 +99,3 @@ D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.csproj.CoreCompileI
 D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.csproj.CopyComplete
 D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.exe
 D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.pdb
-D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.csprojAssemblyReference.cache
