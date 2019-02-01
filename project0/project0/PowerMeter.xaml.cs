@@ -79,6 +79,20 @@ namespace project0
         {
             Storyboard sb = (this.Resources["PerspectiveRotateSB"] as Storyboard);
             sb.Begin();
+
+        }
+
+        /// <summary>
+        /// Reset the Meter
+        /// </summary>
+        public void resetMeter()
+        {
+            Storyboard sb = (this.Resources["PerspectiveRotateSB"] as Storyboard);
+            //sb.Seek(TimeSpan.Zero);
+ 
+            sb.Seek(TimeSpan.Zero, TimeSeekOrigin.BeginTime);
+            sb.Stop();
+            unhideRobert();
         }
 
     }

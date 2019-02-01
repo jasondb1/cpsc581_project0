@@ -34,6 +34,19 @@ namespace project0
             Storyboard sb = (this.Resources["CakeRiseSB"] as Storyboard);
             sb.Begin();
         }
+
+        /// <summary>
+        /// Reset the cake
+        /// </summary>
+        public void reset()
+        {
+            Storyboard sb = (this.Resources["CakeRiseSB"] as Storyboard);
+            sb.Seek(TimeSpan.Zero, TimeSeekOrigin.BeginTime);
+            sb.Stop();
+  
+        }
+
+
     }
 
 }
