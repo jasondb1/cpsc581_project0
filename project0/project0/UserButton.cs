@@ -40,7 +40,13 @@ namespace project0
         /// <returns>true or false</returns>
         public bool isMax()
         {
-            return power >= maxPower;
+            if (power >= maxPower)
+            {
+                power = -1; //used to reset the button
+                return true;
+            }
+            return false;
+     
         }
 
         #region Methods

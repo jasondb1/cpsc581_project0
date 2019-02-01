@@ -64,7 +64,7 @@ namespace project0
         private void OnCounterPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (DEBUG) { Console.WriteLine("[On Counter property Change]:" + e); }
-            this.powerLabel.Content = this.userButton.Power;
+            //this.powerLabel.Content = this.userButton.Power;
         }
 
         /// <summary>
@@ -75,8 +75,18 @@ namespace project0
         private void HandleUserClick(object sender, System.Windows.RoutedEventArgs e)
         {
             if (DEBUG) { Console.WriteLine("[Handle User Click]"); }
+
+            if (userButton.Power == -1)
+            {
+                this.powerMeter.resetMeter();
+                this.cake.Visibility = Visibility.Hidden;
+                this.powerMeter.progressBar.EndAngle = 11 * (360 / 12);
+                this.cake.reset();
+ 
+            }
+
             this.userButton.processClick();
-            this.powerMeter.progressBar.EndAngle += (360/12);
+            this.powerMeter.progressBar.EndAngle += (360 / 12);
 
 
             if (userButton.isMax())
@@ -85,7 +95,7 @@ namespace project0
                 this.powerMeter.hideRobert();
                 this.powerMeter.rotateMeter();
                 this.cake.animate();
-                //TODO: wait and reset or reset on button
+
             }
 
                 
