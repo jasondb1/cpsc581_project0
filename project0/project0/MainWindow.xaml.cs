@@ -83,6 +83,10 @@ namespace project0
                 this.userButton.reset();
                 this.cake.reset();
  
+            }else if (userButton.Power > 5)
+            {
+                this.sweating.Visibility = Visibility.Visible;
+                this.sweating.animateSweating();
             }
 
             this.userButton.processClick();
@@ -92,6 +96,7 @@ namespace project0
             if (userButton.isMax())
             {
                 this.cake.Visibility = Visibility.Visible;
+                this.sweating.Visibility = Visibility.Hidden;
                 this.powerMeter.hideRobert();
                 this.powerMeter.rotateMeter();
                 this.cake.animate();
@@ -116,11 +121,6 @@ namespace project0
         private void PowerMeter_Loaded_1(object sender, RoutedEventArgs e)
         {
 
-        }
-
-        private void PowerMeter_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            // Implement click and hold
         }
     }
 }

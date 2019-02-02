@@ -118,7 +118,7 @@
         </EventTrigger>
     </UserControl.Triggers>
     <Canvas HorizontalAlignment="Left" Height="95.045" VerticalAlignment="Top" Width="100">
-        <Ellipse x:Name="robertHead" Fill="Black" Stroke="Black" Height="64" Canvas.Left="168" Canvas.Top="114.5" Width="72"/>
+        <Ellipse x:Name="robertHead" Fill="White" Stroke="Black" Height="64" Canvas.Left="168" Canvas.Top="114.5" Width="72" StrokeThickness="10"/>
         <Rectangle x:Name="leftArm" Fill="Black" RenderTransformOrigin="0.5,0.5" Height="10" Canvas.Left="80" Canvas.Top="142.5" Width="91.595">
             <Rectangle.RenderTransform>
                 <TransformGroup>

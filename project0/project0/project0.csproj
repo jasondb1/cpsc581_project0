@@ -94,6 +94,9 @@
     <Compile Include="RobertPumping.xaml.cs">
       <DependentUpon>RobertPumping.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Sweating.xaml.cs">
+      <DependentUpon>Sweating.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserButton.cs" />
     <Page Include="cake.xaml">
       <SubType>Designer</SubType>
@@ -116,6 +119,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RobertPumping.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sweating.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
