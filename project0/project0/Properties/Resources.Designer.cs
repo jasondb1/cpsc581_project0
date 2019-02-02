@@ -60,6 +60,22 @@ namespace project0.Properties {
             }
         }
         
-       
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MassEffect2_MissionAccomplished {
+            get {
+                return ResourceManager.GetStream("MassEffect2_MissionAccomplished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MassEffect2_SuicideMission {
+            get {
+                return ResourceManager.GetStream("MassEffect2_SuicideMission", resourceCulture);
+            }
+        }
     }
 }

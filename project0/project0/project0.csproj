@@ -120,5 +120,11 @@
   <ItemGroup>
     <Resource Include="cherry.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MassEffect2-MissionAccomplished.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MassEffect2-SuicideMission.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

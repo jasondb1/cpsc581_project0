@@ -17,6 +17,9 @@ namespace project0
         private const int maxPower = 12;
         private int angle = 0;
 
+        private bool pumpAudio = false;
+        private bool endAudio = false;
+
         #endregion
 
         #region attributes
@@ -73,7 +76,48 @@ namespace project0
             //TODO: Enter Code Here
             this.incrementPower();
             this.Angle += (360 / maxPower);
+            this.playAudio();
         }
+
+        /// <summary>
+        /// Play mass effect audio for pumping and ending
+        /// WARNING: Ending audio is louder then pumping audio
+        /// </summary>
+        private void playAudio()
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            if (pumpAudio == false)
+            {
+                player.Stream = Properties.Resources.MassEffect2_SuicideMission;
+                try
+                {
+                    player.Load();
+                    player.Play();
+                }
+                catch (Exception E) { }
+                pumpAudio = true;
+            }
+            else if (pumpAudio == true && this.power == 12)
+            {
+                player.Stop();
+                player.Stream = Properties.Resources.MassEffect2_MissionAccomplished;
+                try
+                {
+                    player.Load();
+                    player.Play();
+                }
+                catch (Exception E) { }
+                pumpAudio = false;
+                endAudio = true;
+            }
+            else if (endAudio == true || this.power == -1)
+            {
+                player.Stop();
+                pumpAudio = false;
+                endAudio = false;
+            }
+        }
+
 
         /// <summary>
         /// increment power by 1
