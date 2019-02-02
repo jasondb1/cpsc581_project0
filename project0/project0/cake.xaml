@@ -1,9 +1,10 @@
-﻿<UserControl x:Class="project0.cake"
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:project0"
+             xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" x:Class="project0.cake"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="480">
     <UserControl.Resources>
@@ -53,18 +54,134 @@
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CakeCut4">
                 <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-296"/>
             </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="cherry">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.5" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="regularPolygon">
+                <EasingColorKeyFrame KeyTime="0:0:1.4" Value="#FF12C500"/>
+                <EasingColorKeyFrame KeyTime="0:0:2" Value="#FF3F00C5"/>
+                <EasingColorKeyFrame KeyTime="0:0:2.5" Value="#FF12C500"/>
+            </ColorAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="regularPolygon">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="9.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0.417"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="regularPolygon">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="9.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0.417"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="regularPolygon">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-46"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="111.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="304.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="regularPolygon">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="223"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="72.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-14.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.5" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.5" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="regularPolygon1">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="9.583"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0.31"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="regularPolygon1">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-74"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="87.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="257.89"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="regularPolygon1">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="9.583"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0.31"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="regularPolygon1">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="202"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="78.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="62.58"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="regularPolygon1">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="18.451"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="regularPolygon2">
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="15.083"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1.098"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="regularPolygon2">
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="15.083"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1.098"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="regularPolygon2">
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="24"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-228.527"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="-343.216"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="regularPolygon2">
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="122"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="36.527"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="21.531"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="regularPolygon2">
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-14.192"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="regularPolygon1">
+                <EasingColorKeyFrame KeyTime="0:0:2.5" Value="Yellow"/>
+                <EasingColorKeyFrame KeyTime="0:0:3" Value="#FF2368E2"/>
+                <EasingColorKeyFrame KeyTime="0:0:3.5" Value="#FFC823E2"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="regularPolygon2">
+                <EasingColorKeyFrame KeyTime="0:0:3.5" Value="#FF4DD400"/>
+                <EasingColorKeyFrame KeyTime="0:0:4" Value="#FF00C1D4"/>
+                <EasingColorKeyFrame KeyTime="0:0:4.5" Value="#FFD40000"/>
+            </ColorAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="regularPolygon">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="25.496"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <Int32AnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.ZIndex)" Storyboard.TargetName="regularPolygon1">
+                <EasingInt32KeyFrame KeyTime="0:0:2.5" Value="0"/>
+                <EasingInt32KeyFrame KeyTime="0:0:3" Value="50"/>
+                <EasingInt32KeyFrame KeyTime="0:0:3.5" Value="0"/>
+            </Int32AnimationUsingKeyFrames>
+            <Int32AnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.ZIndex)" Storyboard.TargetName="regularPolygon2">
+                <EasingInt32KeyFrame KeyTime="0:0:3.5" Value="50"/>
+                <EasingInt32KeyFrame KeyTime="0:0:4" Value="50"/>
+            </Int32AnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon2">
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.5" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:4" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:4.5" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+
+
 
 
 
         </Storyboard>
     </UserControl.Resources>
     <UserControl.Triggers>
-        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-        </EventTrigger>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded"/>
     </UserControl.Triggers>
     <Canvas x:Name="Cake">
-        <Ellipse x:Name="CakeBase" Height="100" Stroke="Black" StrokeThickness="4" Canvas.Top="500" Width="480" Fill="#FFFDFFD2"/>
-        <Ellipse x:Name="CakeTop" Height="100" Stroke="Black" StrokeThickness="4" Canvas.Top="500" Width="480" Fill="#FFFDFFD2" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="10">
+        <Ellipse x:Name="CakeBase" Height="100" Stroke="Black" StrokeThickness="4" Canvas.Top="500" Width="480" Fill="#FFFDFFD2" d:IsLocked="True"/>
+        <Ellipse x:Name="CakeTop" Height="100" Stroke="Black" StrokeThickness="4" Canvas.Top="500" Width="480" Fill="#FFFDFFD2" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="10" d:IsLocked="True">
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -74,7 +191,7 @@
                 </TransformGroup>
             </Ellipse.RenderTransform>
         </Ellipse>
-        <Rectangle x:Name="CakeSides" Fill="#FFFDFFD2" Height="1" Stroke="Black" StrokeThickness="0" Canvas.Top="547" Width="480" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
+        <Rectangle x:Name="CakeSides" Fill="#FFFDFFD2" Height="1" Stroke="Black" StrokeThickness="0" Canvas.Top="547" Width="480" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5" d:IsLocked="True">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -84,7 +201,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="CakeRight" Fill="#FFFDFFD2" Height="2" Canvas.Left="475.5" Stroke="Black" StrokeThickness="4" Canvas.Top="547" Width="4.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
+        <Rectangle x:Name="CakeRight" Fill="#FFFDFFD2" Height="2" Canvas.Left="475.5" Stroke="Black" StrokeThickness="4" Canvas.Top="547" Width="4.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5" d:IsLocked="True">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -94,7 +211,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="CakeLeft" Fill="#FFFDFFD2" Height="2" Canvas.Left="0" Stroke="Black" StrokeThickness="4" Canvas.Top="547" Width="4.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
+        <Rectangle x:Name="CakeLeft" Fill="#FFFDFFD2" Height="2" Canvas.Left="0" Stroke="Black" StrokeThickness="4" Canvas.Top="547" Width="4.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5" d:IsLocked="True">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -104,7 +221,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="CakeCut1" Fill="#FFFDFFD2" Height="1" Stroke="Black" StrokeThickness="4" Canvas.Top="547" Width="480" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="10">
+        <Rectangle x:Name="CakeCut1" Fill="#FFFDFFD2" Height="1" Stroke="Black" StrokeThickness="4" Canvas.Top="547" Width="480" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="10" d:IsLocked="True">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -114,7 +231,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="CakeCut2" Fill="#FFFDFFD2" Height="100" Canvas.Left="240" Stroke="Black" StrokeThickness="4" Canvas.Top="500" Width="1" Panel.ZIndex="10" RenderTransformOrigin="0.5,0.5">
+        <Rectangle x:Name="CakeCut2" Fill="#FFFDFFD2" Height="100" Canvas.Left="240" Stroke="Black" StrokeThickness="4" Canvas.Top="500" Width="1" Panel.ZIndex="10" RenderTransformOrigin="0.5,0.5" d:IsLocked="True">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -124,7 +241,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="CakeCut3" Fill="#FFFDFFD2" Height="100" Canvas.Left="234" Stroke="Black" StrokeThickness="4" Canvas.Top="500" Width="1" Panel.ZIndex="10" RenderTransformOrigin="0.5,0.5">
+        <Rectangle x:Name="CakeCut3" Fill="#FFFDFFD2" Height="100" Canvas.Left="234" Stroke="Black" StrokeThickness="4" Canvas.Top="500" Width="1" Panel.ZIndex="10" RenderTransformOrigin="0.5,0.5" d:IsLocked="True">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1.2" ScaleY="2.93"/>
@@ -134,7 +251,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="CakeCut4" Fill="#FFFDFFD2" Height="100" Canvas.Left="240" Stroke="Black" StrokeThickness="4" Canvas.Top="498" Width="1" Panel.ZIndex="10" RenderTransformOrigin="0.5,0.5">
+        <Rectangle x:Name="CakeCut4" Fill="#FFFDFFD2" Height="100" Canvas.Left="240" Stroke="Black" StrokeThickness="4" Canvas.Top="498" Width="1" Panel.ZIndex="10" RenderTransformOrigin="0.5,0.5" d:IsLocked="True">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1.2" ScaleY="2.93"/>
@@ -145,7 +262,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
 
-        <Rectangle x:Name="CakeCut5" Fill="#FFFDFFD2" Height="2" Canvas.Left="91.5" Stroke="Black" StrokeThickness="2" Canvas.Top="589" Width="2.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
+        <Rectangle x:Name="CakeCut5" Fill="#FFFDFFD2" Height="2" Canvas.Left="91.5" Stroke="Black" StrokeThickness="2" Canvas.Top="589" Width="2.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5" d:IsLocked="True">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -156,7 +273,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
 
-        <Rectangle x:Name="CakeCut6" Fill="#FFFDFFD2" Height="2" Canvas.Left="238" Stroke="Black" StrokeThickness="2" Canvas.Top="599" Width="2.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
+        <Rectangle x:Name="CakeCut6" Fill="#FFFDFFD2" Height="2" Canvas.Left="238" Stroke="Black" StrokeThickness="2" Canvas.Top="599" Width="2.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5" d:IsLocked="True">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -167,7 +284,7 @@
             </Rectangle.RenderTransform>
         </Rectangle>
 
-        <Rectangle x:Name="CakeCut7" Fill="#FFFDFFD2" Height="2" Canvas.Left="378.5" Stroke="Black" StrokeThickness="2" Canvas.Top="590" Width="2.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5">
+        <Rectangle x:Name="CakeCut7" Fill="#FFFDFFD2" Height="2" Canvas.Left="378.5" Stroke="Black" StrokeThickness="2" Canvas.Top="590" Width="2.0" RenderTransformOrigin="0.5,0.0" Panel.ZIndex="5" d:IsLocked="True">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -177,6 +294,42 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
+        <Rectangle x:Name="cherry" Width="130" Height="130" Canvas.Left="215" Canvas.Top="140" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="20" Visibility="Hidden" d:IsLocked="True">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="cherry.png"/>
+            </Rectangle.Fill>
+
+        </Rectangle>
+        <ed:RegularPolygon x:Name="regularPolygon" Height="12" InnerRadius="0.47211" Canvas.Left="33" PointCount="5" Stretch="Fill" StrokeThickness="4" Canvas.Top="90" Width="12" Panel.ZIndex="50" Stroke="{x:Null}" Visibility="Hidden" Fill="Black" RenderTransformOrigin="0.5,0.5">
+            <ed:RegularPolygon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ed:RegularPolygon.RenderTransform>
+        </ed:RegularPolygon>
+        <ed:RegularPolygon x:Name="regularPolygon1" Fill="#FF2368E2" Height="12" InnerRadius="0.47211" Canvas.Left="176" PointCount="5" Stretch="Fill" StrokeThickness="4" Canvas.Top="46" Width="12" Visibility="Hidden" RenderTransformOrigin="0.5,0.5">
+            <ed:RegularPolygon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ed:RegularPolygon.RenderTransform>
+        </ed:RegularPolygon>
+        <ed:RegularPolygon x:Name="regularPolygon2" Fill="#FF4DD400" Height="12" InnerRadius="0.47211" Canvas.Left="415" PointCount="5" Stretch="Fill" StrokeThickness="4" Canvas.Top="117" Width="12" RenderTransformOrigin="0.417,0.583" Visibility="Hidden">
+            <ed:RegularPolygon.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ed:RegularPolygon.RenderTransform>
+        </ed:RegularPolygon>
 
     </Canvas>
 </UserControl>

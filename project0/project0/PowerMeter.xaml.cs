@@ -21,6 +21,7 @@ namespace project0
     /// </summary>
     public partial class PowerMeter : UserControl
     {
+
         public PowerMeter()
         {
             InitializeComponent();
@@ -94,6 +95,31 @@ namespace project0
             sb.Stop();
             unhideRobert();
         }
+
+        public void meterColor(int angle)
+        {
+            float green;
+            float red;
+            if (angle < 180)
+            {
+                green = (255);
+                red = (angle * 255 / 180);
+            }
+            else
+            {
+                float v = (float)( ((float)angle - (float)180) / 180);
+                red = 255;
+                green = 255 * (1.0f - v);
+            }
+            
+   
+            SolidColorBrush scb = new SolidColorBrush(Color.FromRgb( (byte)red, (byte) green, 50) );
+            this.progressBar.Fill = scb;
+
+
+        }
+
+
 
     }
 }

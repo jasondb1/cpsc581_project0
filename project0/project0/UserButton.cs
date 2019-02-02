@@ -15,6 +15,7 @@ namespace project0
         #region instance variables
         private int power = 0;
         private const int maxPower = 12;
+        private int angle = 0;
 
         #endregion
 
@@ -29,6 +30,19 @@ namespace project0
             {
                 this.power = value;
                 RaisePropertyChanged(new PropertyChangedEventArgs("Power"));
+            }
+        }
+
+        public int Angle
+        {
+            get
+            {
+                return this.angle;
+            }
+            set
+            {
+                this.angle = value;
+                RaisePropertyChanged(new PropertyChangedEventArgs("Angle"));
             }
         }
 
@@ -58,6 +72,7 @@ namespace project0
             if (DEBUG) { Console.Write("[ProcessClick]\n"); }
             //TODO: Enter Code Here
             this.incrementPower();
+            this.Angle += (360 / maxPower);
         }
 
         /// <summary>
@@ -68,6 +83,13 @@ namespace project0
             this.power++;
             RaisePropertyChanged(new PropertyChangedEventArgs("Power"));
             if (DEBUG) { Console.Write("[incrementPower]Power Incremented to:" + power + "\n"); }
+        }
+
+        public void reset()
+        {
+            //this angle is needed to properly display meter
+            this.angle = -(360 / maxPower);
+            power = -1;
         }
 
         #endregion

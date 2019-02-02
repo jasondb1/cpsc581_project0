@@ -28,7 +28,7 @@
                 <TranslateTransform/>
             </TransformGroup>
         </Canvas.RenderTransform>
-        <Canvas x:Name="Meter" Height="560" Width="560" Canvas.Left="10" Canvas.Top="10" RenderTransformOrigin="0.5,0.5">
+        <Canvas x:Name="Meter" Height="560" Width="560" Canvas.Left="10" Canvas.Top="10" RenderTransformOrigin="0.5,0.5" >
             <Canvas.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -37,7 +37,22 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Canvas.RenderTransform>
-            <Ellipse x:Name="OuterRing" Height="560" Stroke="Black" Width="560" Canvas.Left="0" Panel.ZIndex="-5" Margin="-1,0,0,0" StrokeThickness="8">
+
+            <ed:Arc x:Name="progressBar" ArcThickness="30" ArcThicknessUnit="Pixel" EndAngle="0" Height="558" Canvas.Left="0" Stretch="None" StrokeThickness="0" StartAngle="0" Canvas.Top="1" Width="558" RenderTransformOrigin="0.5,0.5" Stroke="Black" Panel.ZIndex="15" Fill="#FF0C0081">
+                <ed:Arc.Effect>
+                    <BlurEffect Radius="4" RenderingBias="Quality"/>
+                </ed:Arc.Effect>
+                <ed:Arc.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ed:Arc.RenderTransform>
+            </ed:Arc>
+
+            <Ellipse x:Name="OuterRing" Height="560" Width="560" Canvas.Left="0" Panel.ZIndex="-5" Margin="-1,0,0,0" StrokeThickness="0">
                 <Ellipse.Effect>
                     <BlurEffect Radius="4" RenderingBias="Quality"/>
                 </Ellipse.Effect>
@@ -47,6 +62,11 @@
                         <GradientStop Color="#FF0014FF" Offset="0.619"/>
                     </RadialGradientBrush>
                 </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="OuterLine" Height="560" Stroke="Black" Width="560" Canvas.Left="0" Panel.ZIndex="25" Margin="-1,0,0,0" StrokeThickness="8">
+                <Ellipse.Effect>
+                    <BlurEffect Radius="4" RenderingBias="Quality"/>
+                </Ellipse.Effect>
             </Ellipse>
             <Rectangle x:Name="Needle" Fill="Black" Height="280" Canvas.Left="274" Stroke="Black" Canvas.Top="280" Width="12" RadiusY="3" RadiusX="3" RenderTransformOrigin="0.5,0" Visibility="Hidden">
                 <Rectangle.RenderTransform>
@@ -58,8 +78,8 @@
                     </TransformGroup>
                 </Rectangle.RenderTransform>
             </Rectangle>
-            <Rectangle x:Name="Start" Fill="Black" Height="280" Canvas.Left="274" Stroke="Black" Canvas.Top="280" Width="12" RadiusY="3" RadiusX="3" RenderTransformOrigin="0.5,0"/>
-            <Ellipse x:Name="InnerRing" Height="500" Canvas.Left="30" Stroke="Black" Canvas.Top="30" Width="500" Panel.ZIndex="5" StrokeThickness="8">
+            <Rectangle x:Name="Start" Fill="Black" Height="280" Canvas.Left="274" Stroke="Black" Canvas.Top="280" Width="12" RadiusY="3" RadiusX="3" RenderTransformOrigin="0.5,0" Visibility="Hidden"/>
+            <Ellipse x:Name="InnerRing" Height="500" Canvas.Left="30" Canvas.Top="30" Width="500" Panel.ZIndex="5" StrokeThickness="8">
                 <Ellipse.Fill>
                     <RadialGradientBrush>
                         <GradientStop Color="#FFBCD6BC"/>
@@ -68,15 +88,33 @@
                     </RadialGradientBrush>
                 </Ellipse.Fill>
             </Ellipse>
+            <Ellipse x:Name="InnerRingLine" Height="500" Canvas.Left="30" Canvas.Top="30" Width="500" Panel.ZIndex="25" StrokeThickness="8" Stroke="Black">
+                <Ellipse.Effect>
+                    <BlurEffect/>
+                </Ellipse.Effect>
+            </Ellipse>
 
-            <Ellipse x:Name="Glass" Height="560" Stroke="Black" Width="560" Canvas.Left="0" Panel.ZIndex="50" Margin="0,0,0,0" StrokeThickness="0">
+            <Ellipse x:Name="Glass" Height="560" Width="560" Canvas.Left="0" Panel.ZIndex="50" Margin="0,0,0,0" StrokeThickness="0">
                 <Ellipse.Effect>
                     <BlurEffect Radius="4" RenderingBias="Quality"/>
                 </Ellipse.Effect>
                 <Ellipse.Fill>
                     <RadialGradientBrush GradientOrigin="0.58,0.33" Center="0.9,0.3">
                         <GradientStop Color="#339296C1" Offset="1"/>
-                        <GradientStop Color="White" Offset="0.071"/>
+                        <GradientStop Color="White" Offset="0.046"/>
+                        <GradientStop Color="#24B9BCD7" Offset="0.444"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="GlassOuter" Height="560" Width="560" Canvas.Left="0" Panel.ZIndex="50" Margin="0,0,0,0" StrokeThickness="0">
+                <Ellipse.Effect>
+                    <BlurEffect Radius="4" RenderingBias="Quality"/>
+                </Ellipse.Effect>
+                <Ellipse.Fill>
+                    <RadialGradientBrush GradientOrigin="0.8,0.25" Center="0.5,0.5">
+                        <GradientStop Color="#269296C1" Offset="0.117"/>
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Offset="0.958"/>
                     </RadialGradientBrush>
                 </Ellipse.Fill>
             </Ellipse>
@@ -84,19 +122,7 @@
         </Canvas>
         <local:RobertPumping x:Name="Robert" Canvas.Left="83.165" Canvas.Top="207.165" Panel.ZIndex="15" />
 
-        <ed:Arc x:Name="progressBar" ArcThickness="30" ArcThicknessUnit="Pixel" EndAngle="0" Height="560" Canvas.Left="10" Stretch="None" StrokeThickness="4" StartAngle="0" Canvas.Top="10" Width="560" Fill="#FF0C0081" RenderTransformOrigin="0.5,0.5" Stroke="Black">
-            <ed:Arc.Effect>
-                <BlurEffect Radius="4" RenderingBias="Quality"/>
-            </ed:Arc.Effect>
-            <ed:Arc.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="180"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </ed:Arc.RenderTransform>
-        </ed:Arc>
+
 
     </Canvas>
 </UserControl>

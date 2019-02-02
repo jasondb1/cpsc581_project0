@@ -24,6 +24,24 @@ namespace project0
         public cake()
         {
             InitializeComponent();
+            this.MouseDown += UserControl_MouseLeftButtonUp;
+        }
+
+        /// <summary>
+        /// Provide a routed event for main window or other windwos listening
+        /// </summary>
+        public static readonly RoutedEvent UserClickEvent = EventManager.RegisterRoutedEvent("UserClickCake", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(PowerMeter));
+
+        // Provide CLR accessors for the event
+        public event RoutedEventHandler UserClickCake
+        {
+            add { AddHandler(UserClickEvent, value); }
+            remove { RemoveHandler(UserClickEvent, value); }
+        }
+
+        private void RaiseUserClickEvent()
+        {
+            RoutedEventArgs userClickEventArgs = new RoutedEventArgs();
         }
 
         /// <summary>
@@ -46,7 +64,10 @@ namespace project0
   
         }
 
-
+        private void UserControl_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            this.RaiseEvent(new RoutedEventArgs(UserClickEvent, this));
+        }
     }
 
 }

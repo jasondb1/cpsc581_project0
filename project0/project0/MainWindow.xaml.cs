@@ -80,14 +80,14 @@ namespace project0
             {
                 this.powerMeter.resetMeter();
                 this.cake.Visibility = Visibility.Hidden;
-                this.powerMeter.progressBar.EndAngle = 11 * (360 / 12);
+                this.userButton.reset();
                 this.cake.reset();
  
             }
 
             this.userButton.processClick();
-            this.powerMeter.progressBar.EndAngle += (360 / 12);
-
+            this.powerMeter.progressBar.EndAngle = userButton.Angle;
+            this.powerMeter.meterColor(userButton.Angle);
 
             if (userButton.isMax())
             {
