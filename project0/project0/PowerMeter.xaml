@@ -94,15 +94,17 @@
                 </Ellipse.Effect>
             </Ellipse>
 
+            <local:RobertPumping x:Name="Robert" Canvas.Left="83.165" Canvas.Top="207.165" Panel.ZIndex="45" />
+
             <Ellipse x:Name="Glass" Height="560" Width="560" Canvas.Left="0" Panel.ZIndex="50" Margin="0,0,0,0" StrokeThickness="0">
                 <Ellipse.Effect>
                     <BlurEffect Radius="4" RenderingBias="Quality"/>
                 </Ellipse.Effect>
                 <Ellipse.Fill>
-                    <RadialGradientBrush GradientOrigin="0.58,0.33" Center="0.9,0.3">
+                    <RadialGradientBrush GradientOrigin="0.65,0.30" Center="0.9,0.3">
                         <GradientStop Color="#339296C1" Offset="1"/>
-                        <GradientStop Color="White" Offset="0.046"/>
-                        <GradientStop Color="#24B9BCD7" Offset="0.444"/>
+                        <GradientStop Color="#FFF4FFF4" Offset="0.027"/>
+                        <GradientStop Color="#24B9BCD7" Offset="0.393"/>
                     </RadialGradientBrush>
                 </Ellipse.Fill>
             </Ellipse>
@@ -114,13 +116,13 @@
                     <RadialGradientBrush GradientOrigin="0.8,0.25" Center="0.5,0.5">
                         <GradientStop Color="#269296C1" Offset="0.117"/>
                         <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Offset="0.958"/>
+                        <GradientStop Offset="0.937"/>
                     </RadialGradientBrush>
                 </Ellipse.Fill>
             </Ellipse>
 
         </Canvas>
-        <local:RobertPumping x:Name="Robert" Canvas.Left="83.165" Canvas.Top="207.165" Panel.ZIndex="15" />
+
 
 
 

@@ -116,7 +116,7 @@ namespace project0 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/project0;component/robertpumping.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/RobertButton;component/robertpumping.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\RobertPumping.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

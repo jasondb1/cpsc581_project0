@@ -8,6 +8,12 @@
         Title="The Robert Button" Height="800" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
     <Canvas Name="Container" Margin="0,0,-8,1">
+        <Canvas.Background>
+            <RadialGradientBrush Center="0.76,0.36" GradientOrigin="0.8,0.66" RadiusY="0.45">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF4963BD" Offset="0.26"/>
+            </RadialGradientBrush>
+        </Canvas.Background>
         <Label x:Name="title" Content="The Robert Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
         <local:PowerMeter x:Name="powerMeter" Height="580" Canvas.Top="185.15" Width="580" Canvas.Left="10" UserClick="HandleUserClick"/>
         <local:cake x:Name="cake" Height="580" Canvas.Top="-67.141" Width="580" Canvas.Left="57.43" Visibility="Hidden" UserClickCake="HandleUserClick"/>
