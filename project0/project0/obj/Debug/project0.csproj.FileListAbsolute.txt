@@ -99,3 +99,5 @@ D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.csproj.CoreCompileI
 D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.csproj.CopyComplete
 D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.exe
 D:\git\cpsc581_project0\project0\project0\obj\Debug\project0.pdb
+C:\Users\Cole\Documents\cpsc581_project0\project0\project0\obj\Debug\RobertChinup.g.cs
+C:\Users\Cole\Documents\cpsc581_project0\project0\project0\obj\Debug\RobertChinup.baml

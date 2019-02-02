@@ -62,6 +62,9 @@
     <Compile Include="PowerMeter.xaml.cs">
       <DependentUpon>PowerMeter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RobertChinup.xaml.cs">
+      <DependentUpon>RobertChinup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RobertPumping.xaml.cs">
       <DependentUpon>RobertPumping.xaml</DependentUpon>
     </Compile>
@@ -83,6 +86,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PowerMeter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RobertChinup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -116,6 +123,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ClosedMouth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BackEmptyStraight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LeftForearmEmptyStraight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LeftBicepEmptyStraight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RightForearmEmptyStraight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RightBicepEmptyStraight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LeftBicepEmptyBent.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
