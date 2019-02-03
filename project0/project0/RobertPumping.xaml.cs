@@ -23,7 +23,7 @@ namespace project0
     public partial class RobertPumping : UserControl
     {
         Timer timer;
-        int currentTime = 1000;
+        int currentTime = 0;
         bool pumpCompleted = false;
         bool pumpReverseCompleted = false;
         bool sbCompleted = true;
@@ -44,32 +44,36 @@ namespace project0
         /// </summary>
         public void AnimateUp()
         {
+            pumpCompleted = false;
             liftCompleted = false;
             sbCompleted = false;
-            Storyboard sb = (this.Resources["Pump"] as Storyboard);
+            //Storyboard sb = (this.Resources["Pump"] as Storyboard);
             sb.Begin();
            
         }
 
         public void AnimateDown()
         {
-            sbCompleted = false;
-            sb.Pause();
+            pumpReverseCompleted = false;
+            sb.Stop();
             sbReverse.Begin();
         }
 
         private void Storyboard_Completed(object sender, EventArgs e)
         {
             //pump completed
-            sbCompleted = true;
+            pumpCompleted = true;
             
         }
 
         private void Storyboard_Completed_1(object sender, EventArgs e)
         {
             //pump reverse completed
-            sbCompleted = true;
-            liftCompleted = true;
+            pumpReverseCompleted = false;
+            if (pumpCompleted)
+            {
+                liftCompleted = true;
+            }
         }
 
         public bool isLiftComplete()
@@ -77,9 +81,29 @@ namespace project0
             return liftCompleted;
         }
 
-        public bool isAnimationComplete()
+        public bool isPumpComplete()
         {
-            return sbCompleted;
+            return pumpCompleted;
         }
+
+
+        public void animateDropWeight()
+        {
+            //sb = (this.Resources["Pump"] as Storyboard);
+            Console.WriteLine("[Drop Early]:" + (sb.GetCurrentTime()));
+            sb.GetCurrentTime();
+
+            TimeSpan tempTime = new TimeSpan(0, 0, 1) - sb.GetCurrentTime();
+            sb.Stop();
+            //sb.Seek(TimeSpan.Zero, TimeSeekOrigin.BeginTime);
+
+            //sbReverse.Seek(tempTime, TimeSeekOrigin.BeginTime);
+            sbReverse.Seek(tempTime);
+            sbReverse.Resume();
+      
+
+        }
+
+
     }
 }

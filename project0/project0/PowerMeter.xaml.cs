@@ -56,13 +56,13 @@ namespace project0
         /// <param name="e"></param>
         private void PowerMeter_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            if (this.Robert.isAnimationComplete())
+            if (this.Robert.isPumpComplete())
             {
                 this.Robert.AnimateDown();
             }
             else
             {
-
+                this.Robert.animateDropWeight();
             }
         }
 
@@ -73,6 +73,7 @@ namespace project0
         /// <param name="e"></param>
         private void PowerMeter_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            //if (this.Robert.isWeightDown())
             if (this.Robert.isLiftComplete())
             {
                 this.Robert.AnimateUp();
@@ -80,7 +81,7 @@ namespace project0
             }
             else
             {
-                this.Robert.AnimateDown();
+                
             }
         }
 
