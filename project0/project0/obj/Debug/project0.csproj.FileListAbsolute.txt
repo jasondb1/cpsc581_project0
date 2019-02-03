@@ -149,3 +149,5 @@ C:\Users\colep\Documents\cpsc581_project0\project0\project0\obj\Debug\RobertButt
 C:\Users\colep\Documents\cpsc581_project0\project0\project0\obj\Debug\project0.csproj.CopyComplete
 C:\Users\colep\Documents\cpsc581_project0\project0\project0\obj\Debug\RobertButton.exe
 C:\Users\colep\Documents\cpsc581_project0\project0\project0\obj\Debug\RobertButton.pdb
+D:\git\cpsc581_project0\project0\project0\obj\Debug\Sweating.g.cs
+D:\git\cpsc581_project0\project0\project0\obj\Debug\Sweating.baml

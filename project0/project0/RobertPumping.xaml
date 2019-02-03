@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:project0"
              mc:Ignorable="d" Width="388.91" Height="181.545">
     <UserControl.Resources>
-        <Storyboard x:Key="Pump">
+        <Storyboard x:Key="Pump" Completed="Storyboard_Completed">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Bar">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-76.5"/>
@@ -81,7 +81,7 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-30.5"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-        <Storyboard x:Key="PumpReverse">
+        <Storyboard x:Key="PumpReverse" Completed="Storyboard_Completed_1">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Bar">
                 <SplineDoubleKeyFrame KeyTime="0" Value="-76.5"/>
                 <SplineDoubleKeyFrame KeyTime="0:0:1" Value="0"/>

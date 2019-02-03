@@ -24,6 +24,10 @@ namespace project0
     {
         Timer timer;
         int currentTime = 1000;
+        bool pumpCompleted = false;
+        bool pumpReverseCompleted = false;
+        bool sbCompleted = true;
+        bool liftCompleted = true;
 
         Storyboard sb;
         Storyboard sbReverse;
@@ -40,16 +44,42 @@ namespace project0
         /// </summary>
         public void AnimateUp()
         {
+            liftCompleted = false;
+            sbCompleted = false;
             Storyboard sb = (this.Resources["Pump"] as Storyboard);
             sb.Begin();
+           
         }
 
         public void AnimateDown()
         {
+            sbCompleted = false;
             sb.Pause();
             sbReverse.Begin();
         }
 
+        private void Storyboard_Completed(object sender, EventArgs e)
+        {
+            //pump completed
+            sbCompleted = true;
+            
+        }
 
+        private void Storyboard_Completed_1(object sender, EventArgs e)
+        {
+            //pump reverse completed
+            sbCompleted = true;
+            liftCompleted = true;
+        }
+
+        public bool isLiftComplete()
+        {
+            return liftCompleted;
+        }
+
+        public bool isAnimationComplete()
+        {
+            return sbCompleted;
+        }
     }
 }

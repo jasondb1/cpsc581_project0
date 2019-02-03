@@ -31,12 +31,6 @@ namespace project0
 
         }
 
-        private void PowerMeter_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            this.Robert.AnimateDown();
-            //throw new NotImplementedException();
-        }
-
         /// <summary>
         /// Provide a routed event for main window or other windwos listening
         /// </summary>
@@ -54,6 +48,24 @@ namespace project0
             RoutedEventArgs userClickEventArgs = new RoutedEventArgs();
         }
 
+
+        /// <summary>
+        /// Mouse Button up Handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PowerMeter_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            if (this.Robert.isAnimationComplete())
+            {
+                this.Robert.AnimateDown();
+            }
+            else
+            {
+
+            }
+        }
+
         /// <summary>
         /// User Button is clicked
         /// </summary>
@@ -61,8 +73,15 @@ namespace project0
         /// <param name="e"></param>
         private void PowerMeter_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.Robert.AnimateUp();
-            this.RaiseEvent(new RoutedEventArgs(UserClickEvent, this));
+            if (this.Robert.isLiftComplete())
+            {
+                this.Robert.AnimateUp();
+                this.RaiseEvent(new RoutedEventArgs(UserClickEvent, this));
+            }
+            else
+            {
+                this.Robert.AnimateDown();
+            }
         }
 
         /// <summary>
@@ -104,6 +123,10 @@ namespace project0
             unhideRobert();
         }
 
+        /// <summary>
+        /// Changes the meter color dependant on angle
+        /// </summary>
+        /// <param name="angle"></param>
         public void meterColor(int angle)
         {
             float green;
@@ -123,11 +146,16 @@ namespace project0
    
             SolidColorBrush scb = new SolidColorBrush(Color.FromRgb( (byte)red, (byte) green, 50) );
             this.progressBar.Fill = scb;
-
-
         }
 
-
+        /// <summary>
+        /// Returns if lift is complete or not
+        /// </summary>
+        /// <returns></returns>
+        public bool isLiftCompleted()
+        {
+            return this.Robert.isLiftComplete();
+        }
 
     }
 }
