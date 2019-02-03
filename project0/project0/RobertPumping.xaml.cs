@@ -25,9 +25,10 @@ namespace project0
         Timer timer;
         int currentTime = 0;
         bool pumpCompleted = false;
-        bool pumpReverseCompleted = false;
+        bool pumpReverseCompleted = true;
         bool sbCompleted = true;
         bool liftCompleted = true;
+
 
         Storyboard sb;
         Storyboard sbReverse;
@@ -69,11 +70,13 @@ namespace project0
         private void Storyboard_Completed_1(object sender, EventArgs e)
         {
             //pump reverse completed
-            pumpReverseCompleted = false;
+            pumpReverseCompleted = true;
             if (pumpCompleted)
             {
                 liftCompleted = true;
             }
+
+            Console.WriteLine("[Weight Down]");
         }
 
         public bool isLiftComplete()
@@ -84,6 +87,11 @@ namespace project0
         public bool isPumpComplete()
         {
             return pumpCompleted;
+        }
+
+        public bool isWeightDown()
+        {
+            return pumpReverseCompleted;
         }
 
 
@@ -100,10 +108,25 @@ namespace project0
             //sbReverse.Seek(tempTime, TimeSeekOrigin.BeginTime);
             sbReverse.Seek(tempTime);
             sbReverse.Resume();
-      
+
 
         }
 
+        public void animateRaiseWeight()
+        {
+            //sb = (this.Resources["Pump"] as Storyboard);
+            Console.WriteLine("[Raise Early]:" + (sbReverse.GetCurrentTime()));
+            sbReverse.GetCurrentTime();
+
+            TimeSpan tempTime = new TimeSpan(0, 0, 1) - sbReverse.GetCurrentTime();
+            sbReverse.Stop();
+            //sb.Seek(TimeSpan.Zero, TimeSeekOrigin.BeginTime);
+
+            //sbReverse.Seek(tempTime, TimeSeekOrigin.BeginTime);
+            sb.Seek(tempTime);
+            sb.Resume();
+
+        }
 
     }
 }

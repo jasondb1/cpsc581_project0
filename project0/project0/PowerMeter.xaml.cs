@@ -59,6 +59,7 @@ namespace project0
             if (this.Robert.isPumpComplete())
             {
                 this.Robert.AnimateDown();
+                this.RaiseEvent(new RoutedEventArgs(UserClickEvent, this));
             }
             else
             {
@@ -73,15 +74,14 @@ namespace project0
         /// <param name="e"></param>
         private void PowerMeter_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            //if (this.Robert.isWeightDown())
-            if (this.Robert.isLiftComplete())
+            if (this.Robert.isWeightDown())
             {
                 this.Robert.AnimateUp();
-                this.RaiseEvent(new RoutedEventArgs(UserClickEvent, this));
+                //this.RaiseEvent(new RoutedEventArgs(UserClickEvent, this));
             }
             else
             {
-                
+                this.Robert.animateRaiseWeight();
             }
         }
 
@@ -118,7 +118,7 @@ namespace project0
         {
             Storyboard sb = (this.Resources["PerspectiveRotateSB"] as Storyboard);
             //sb.Seek(TimeSpan.Zero);
- 
+
             sb.Seek(TimeSpan.Zero, TimeSeekOrigin.BeginTime);
             sb.Stop();
             unhideRobert();
@@ -139,13 +139,13 @@ namespace project0
             }
             else
             {
-                float v = (float)( ((float)angle - (float)180) / 180);
+                float v = (float)(((float)angle - (float)180) / 180);
                 red = 255;
                 green = 255 * (1.0f - v);
             }
-            
-   
-            SolidColorBrush scb = new SolidColorBrush(Color.FromRgb( (byte)red, (byte) green, 50) );
+
+
+            SolidColorBrush scb = new SolidColorBrush(Color.FromRgb((byte)red, (byte)green, 50));
             this.progressBar.Fill = scb;
         }
 

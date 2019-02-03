@@ -89,9 +89,11 @@ namespace project0
                 this.sweating.animateSweating();
             }
 
-            this.userButton.processClick();
-            this.powerMeter.progressBar.EndAngle = userButton.Angle;
-            this.powerMeter.meterColor(userButton.Angle);
+
+                this.userButton.processClick();
+                this.powerMeter.progressBar.EndAngle = userButton.Angle;
+                this.powerMeter.meterColor(userButton.Angle);
+           
 
             if (userButton.isMax())
             {
