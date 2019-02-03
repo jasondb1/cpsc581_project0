@@ -168,5 +168,29 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LeftBicepEmpty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RightBicepFull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LeftBicepFull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RightForearmEmpty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LeftForearmEmpty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RightBicepEmpty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LeftBicepHalf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RightBicepHalf.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

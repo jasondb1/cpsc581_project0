@@ -21,12 +21,19 @@ namespace project0
     /// </summary>
     public partial class PowerMeter : UserControl
     {
+        private static int timer = 0;
 
         public PowerMeter()
         {
             InitializeComponent();
             this.MouseDown += PowerMeter_MouseDown;
+            this.MouseUp += PowerMeter_MouseUp;
 
+        }
+
+        private void PowerMeter_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -53,7 +60,7 @@ namespace project0
         /// <param name="e"></param>
         private void PowerMeter_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.Robert.animate();
+            this.Robert.animate(timer);
             this.RaiseEvent(new RoutedEventArgs(UserClickEvent, this));
         }
 

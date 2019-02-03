@@ -29,7 +29,7 @@ namespace project0
         /// <summary>
         /// Animate Robert
         /// </summary>
-        public void animate()
+        public void animate(int timer)
         {
             Storyboard sb = (this.Resources["Pump"] as Storyboard);
             sb.Begin();
