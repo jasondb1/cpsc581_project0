@@ -60,7 +60,7 @@
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="regularPolygon">
                 <DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.5" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.5" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
             <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="regularPolygon">
                 <EasingColorKeyFrame KeyTime="0:0:1.4" Value="#FF12C500"/>
@@ -169,6 +169,106 @@
                 <DiscreteObjectKeyFrame KeyTime="0:0:4" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:4.5" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="candy">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="candy">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="100.25"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-98.217"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-309.903"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="candy">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="55.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-80.791"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-57.466"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Rectangle.RadiusX)" Storyboard.TargetName="candy">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="64.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Rectangle.RadiusY)" Storyboard.TargetName="candy">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="64.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="candy">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.504"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.636"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-0.086"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="candy">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0.504"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.636"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-0.086"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="candy">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-120"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-238.735"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="chocolate">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.5" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.5" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="chocolate">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-191.488"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-85.59"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="17.918"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="chocolate">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="48"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-74.919"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-138.103"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="chocolate">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0.284"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.423"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0.08"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="chocolate">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0.361"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.537"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0.101"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="chocolate">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="18.923"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-69.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="41.682"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="apple">
+                <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.5" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:4" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="apple">
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-121.053"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-195.803"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-302.263"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="apple">
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="42"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-66.087"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-144.088"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="apple">
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.407"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0.519"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0.097"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="apple">
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.454"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0.578"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0.108"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="apple">
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-137.278"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-258.455"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="regularPolygon">
+                <EasingPointKeyFrame KeyTime="0:0:1.4" Value="1.5,-0.917"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="0.5,0.5"/>
+            </PointAnimationUsingKeyFrames>
 
 
 
@@ -294,9 +394,37 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Rectangle x:Name="cherry" Width="130" Height="130" Canvas.Left="215" Canvas.Top="140" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="20" Visibility="Hidden" d:IsLocked="True">
+        <Rectangle x:Name="cherry" Width="130" Height="130" Canvas.Left="215" Canvas.Top="140" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="20" Visibility="Hidden">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="cherry.png"/>
+            </Rectangle.Fill>
+
+        </Rectangle>
+        <Rectangle x:Name="apple" Width="130" Height="130" Canvas.Left="215" Canvas.Top="140" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="20" Visibility="Hidden">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="apple2.png"/>
+            </Rectangle.Fill>
+
+        </Rectangle>
+        <Rectangle x:Name="candy" Width="130" Height="130" Canvas.Left="215" Canvas.Top="140" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="20" Visibility="Hidden" Stroke="{x:Null}">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="0.739"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="40.5"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="candy.png"/>
             </Rectangle.Fill>
 
         </Rectangle>
@@ -330,6 +458,20 @@
                 </TransformGroup>
             </ed:RegularPolygon.RenderTransform>
         </ed:RegularPolygon>
+        <Rectangle x:Name="chocolate" Width="203.459" Height="203.459" Canvas.Left="202.164" Canvas.Top="95.556" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="20" Visibility="Hidden">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="chocolate.png"/>
+            </Rectangle.Fill>
+
+        </Rectangle>
 
     </Canvas>
 </UserControl>

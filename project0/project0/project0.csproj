@@ -192,5 +192,11 @@
   <ItemGroup>
     <Resource Include="RightBicepHalf.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="apple2.png" />
+    <Resource Include="candy.png" />
+    <Resource Include="chocolate.png" />
+    <Resource Include="vege.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
