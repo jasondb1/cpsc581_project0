@@ -147,7 +147,7 @@
         </EventTrigger>
     </UserControl.Triggers>
     <Canvas HorizontalAlignment="Left" Height="95.045" VerticalAlignment="Top" Width="100">
-        <Ellipse x:Name="robertHead" Fill="White" Stroke="Black" Height="64" Canvas.Left="168" Canvas.Top="96.5" Width="72" StrokeThickness="10"/>
+        <Ellipse x:Name="robertHead" Fill="White" Stroke="Black" Height="64" Canvas.Left="168" Canvas.Top="96.5" Width="72" StrokeThickness="10" Panel.ZIndex="20"/>
         <Rectangle x:Name="Bar" Fill="#FF4F4F4F" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="343.5" RenderTransformOrigin="0.5,0.5" Canvas.Left="35" Canvas.Top="50.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>

@@ -10,7 +10,7 @@ namespace project0
     public class UserButton: INotifyPropertyChanged
     {
 
-        public const bool DEBUG = true;
+        public const bool DEBUG = false;
 
         #region instance variables
         private int power = 0;
@@ -133,6 +133,7 @@ namespace project0
         {
             //this angle is needed to properly display meter
             this.angle = -(360 / maxPower);
+            //this.angle = 0;
             power = -1;
         }
 

@@ -22,11 +22,9 @@ namespace project0
     /// </summary>
     public partial class RobertPumping : UserControl
     {
-        Timer timer;
-        int currentTime = 0;
+
         bool pumpCompleted = false;
         bool pumpReverseCompleted = true;
-        bool sbCompleted = true;
         bool liftCompleted = true;
 
 
@@ -47,8 +45,7 @@ namespace project0
         {
             pumpCompleted = false;
             liftCompleted = false;
-            sbCompleted = false;
-            //Storyboard sb = (this.Resources["Pump"] as Storyboard);
+
             sb.Begin();
            
         }
@@ -75,8 +72,6 @@ namespace project0
             {
                 liftCompleted = true;
             }
-
-            Console.WriteLine("[Weight Down]");
         }
 
         public bool isLiftComplete()
@@ -97,32 +92,27 @@ namespace project0
 
         public void animateDropWeight()
         {
-            //sb = (this.Resources["Pump"] as Storyboard);
-            Console.WriteLine("[Drop Early]:" + (sb.GetCurrentTime()));
             sb.GetCurrentTime();
 
             TimeSpan tempTime = new TimeSpan(0, 0, 1) - sb.GetCurrentTime();
             sb.Stop();
-            //sb.Seek(TimeSpan.Zero, TimeSeekOrigin.BeginTime);
 
-            //sbReverse.Seek(tempTime, TimeSeekOrigin.BeginTime);
             sbReverse.Seek(tempTime);
             sbReverse.Resume();
 
 
         }
 
+        /// <summary>
+        /// Raise the bar if in middle of lowering bar
+        /// </summary>
         public void animateRaiseWeight()
         {
-            //sb = (this.Resources["Pump"] as Storyboard);
-            Console.WriteLine("[Raise Early]:" + (sbReverse.GetCurrentTime()));
             sbReverse.GetCurrentTime();
 
             TimeSpan tempTime = new TimeSpan(0, 0, 1) - sbReverse.GetCurrentTime();
             sbReverse.Stop();
-            //sb.Seek(TimeSpan.Zero, TimeSeekOrigin.BeginTime);
 
-            //sbReverse.Seek(tempTime, TimeSeekOrigin.BeginTime);
             sb.Seek(tempTime);
             sb.Resume();
 

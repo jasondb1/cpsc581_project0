@@ -21,7 +21,6 @@ namespace project0
     /// </summary>
     public partial class PowerMeter : UserControl
     {
-        private static int timer = 0;
 
         public PowerMeter()
         {
@@ -118,6 +117,7 @@ namespace project0
         {
             Storyboard sb = (this.Resources["PerspectiveRotateSB"] as Storyboard);
             //sb.Seek(TimeSpan.Zero);
+            progressBar.EndAngle = 0;
 
             sb.Seek(TimeSpan.Zero, TimeSeekOrigin.BeginTime);
             sb.Stop();

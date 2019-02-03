@@ -25,7 +25,7 @@ namespace project0
     {
 
         public UserButton userButton = new UserButton();
-        public const bool DEBUG = true;
+        public const bool DEBUG = false;
 
         public MainWindow()
         {
@@ -70,7 +70,16 @@ namespace project0
 
         private void PowerMeter_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
         {
-            if (userButton.Power > 5)
+
+            if (userButton.Power == -1)
+            {
+                this.powerMeter.resetMeter();
+                this.cake.Visibility = Visibility.Hidden;
+                this.userButton.reset();
+                this.cake.reset();
+            }
+
+                if (userButton.Power > 5)
             {
                 this.sweating.Visibility = Visibility.Visible;
                 this.sweating.animateSweating();
@@ -85,20 +94,6 @@ namespace project0
         private void HandleUserClick(object sender, System.Windows.RoutedEventArgs e)
         {
             if (DEBUG) { Console.WriteLine("[Handle User Click]"); }
-
-            if (userButton.Power == -1)
-            {
-                this.powerMeter.resetMeter();
-                this.cake.Visibility = Visibility.Hidden;
-                this.userButton.reset();
-                this.cake.reset();
- 
-            }else if (userButton.Power > 5)
-            {
-                //this.sweating.Visibility = Visibility.Visible;
-                //this.sweating.animateSweating();
-            }
-
 
                 this.userButton.processClick();
                 this.powerMeter.progressBar.EndAngle = userButton.Angle;
@@ -135,5 +130,9 @@ namespace project0
 
         }
 
+        private void Cake_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            PowerMeter_MouseLeftButtonDown_1(sender, e);
+        }
     }
 }
