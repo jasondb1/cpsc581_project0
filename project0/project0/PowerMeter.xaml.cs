@@ -33,6 +33,7 @@ namespace project0
 
         private void PowerMeter_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            this.Robert.AnimateDown();
             //throw new NotImplementedException();
         }
 
@@ -60,7 +61,7 @@ namespace project0
         /// <param name="e"></param>
         private void PowerMeter_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.Robert.animate(timer);
+            this.Robert.AnimateUp();
             this.RaiseEvent(new RoutedEventArgs(UserClickEvent, this));
         }
 
