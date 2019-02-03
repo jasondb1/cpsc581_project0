@@ -67,6 +67,16 @@ namespace project0
             //this.powerLabel.Content = this.userButton.Power;
         }
 
+
+        private void PowerMeter_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        {
+            if (userButton.Power > 5)
+            {
+                this.sweating.Visibility = Visibility.Visible;
+                this.sweating.animateSweating();
+            }
+        }
+       
         /// <summary>
         /// Calls the button logic when a button is pressed
         /// </summary>
@@ -85,8 +95,8 @@ namespace project0
  
             }else if (userButton.Power > 5)
             {
-                this.sweating.Visibility = Visibility.Visible;
-                this.sweating.animateSweating();
+                //this.sweating.Visibility = Visibility.Visible;
+                //this.sweating.animateSweating();
             }
 
 
@@ -124,5 +134,6 @@ namespace project0
         {
 
         }
+
     }
 }
